@@ -13,12 +13,17 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os
 
+import pymysql
+pymysql.install_as_MySQLdb()
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Static files
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 
@@ -86,6 +91,17 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'kelly',  # Replace with your database name
+#         'USER': 'root',  # Default XAMPP username
+#         'PASSWORD': '',  # Default XAMPP password (empty if not set)
+#         'HOST': '127.0.0.1',  # Use 'localhost' or '127.0.0.1'
+#         'PORT': '3306',  # Default MySQL port
+#     }
+# }
+
 
 
 # Password validation

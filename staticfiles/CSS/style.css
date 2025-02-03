@@ -1,0 +1,128 @@
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+.topnav .icon {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+      float: right;
+      display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+  }
+  .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+  }
+}
+.topnav h2 {
+  color: beige;
+  text-align: center; /* Centers text horizontally */
+  margin: 0; /* Removes default margins */
+  line-height: 50px; /* Adjust to match the height of your header */
+}
+
+
+.carousel {
+max-height: 450px; /* Restricts carousel height */
+overflow: hidden;
+}
+
+.carousel-inner img {
+max-height: 400px; /* Restricts image height */
+width: 100%; /* Ensures full width */
+object-fit: cover; /* Crops and fits image */
+}
+
+.carousel-caption {
+bottom: 20px; /* Adjusts caption position */
+}
+
+/* search section */
+.search-section {
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Center items horizontally */
+  margin: 20px auto; /* Center the section and add spacing */
+  width: 100%; /* Adjust width if necessary */
+}
+
+.search-section form {
+  display: flex;
+  flex-direction: column; /* Arrange form elements in a vertical column */
+  gap: 10px; /* Add spacing between form elements */
+  width: 50%; /* Optional: Adjust form width */
+}
+
+.search-section input[type="search"],
+.search-section input[type="submit"] {
+  padding: 10px; /* Add padding for better usability */
+  font-size: 16px; /* Increase font size for readability */
+  border: 1px solid #ccc; /* Optional: Border styling */
+  border-radius: 5px; /* Optional: Rounded corners */
+}
+
+.search-section input[type="submit"] {
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.search-section input[type="submit"]:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+
+/* images/Item section */
+.items-container {
+  display: flex;
+  flex-wrap: wrap; /* Enable wrapping */
+  justify-content: center; /* Center items horizontally */
+  gap: 20px; /* Space between items */
+  padding: 10px; /* Optional: padding around the container */
+}
+
+.polaroid {
+  flex: 1 1 calc(25% - 20px); /* 4 columns (25% width minus gap) */
+  max-width: calc(25% - 20px);
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 10px;
+  text-align: center;
+}
+
+.polaroid img {
+  width: 100%; /* Make image fit the polaroid container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Optional: rounded corners */
+}
+
